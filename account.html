@@ -1,161 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Products - UncleYaks</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap rel=stylesheet"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>GeeksforGeeks Registration</title>
 </head>
+
 <body>
-    
-      <div class="container">
-    <div class="navbar">
-        <div class="logo">
-            <img src="images/Logotop.png" width="130px" height="50">
-        </div>
-        <nav>
-            <ul id="MenuItems">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="addtocart.html">Product</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact%20us.html">Contact</a></li>
-                <li><a href="">Account</a></li>
-            </ul>
-        </nav>
-        <img src="images/download%20(1).png" width="30px" height="30px">
-        <img src="images/menu-icon.png" class="menu-icon" onclick="menutoggle()">
-   </div>
-  </div>
+	<div class="main">
+		<h1>UncleYaks</h1>
+		<h3>Enter your login credentials</h3>
+		<form action="">
+			<label for="first">
+				Username:
+			</label>
+			<input type="text"
+				id="first"
+				name="first"
+				placeholder="Enter your Username" required>
 
-<!------- account-page---------->
-    
-    <div class="account-page">
-        <div class="container">
-            <div class="row">
-                <div class="col-2">
-                    <img src="images/home.png" width="100%">
-                </div>
-                <div class="col-2">
-                    <div class="form-container">
-                        <div class="form-btn">
-                            <span onclick="login()">Login</span>
-                            <span onclick="register()">Register</span>
-                            <hr id="Indicator">
-                        </div>
-                        
-                        <form id="LoginForm">
-                            <input type="text" placeholder="Username">
-                            <input type="password" placeholder="Password">
-                            <a href="product.html"><button type="submit" class="btn">Login</button></a>
-                            
-                            <a href="">Forgot password</a>
-                        </form>
-                        <form id="RegForm">
-                            <input type="text" placeholder="Full Name">
-                            <input type="text" placeholder="Address">
-                            <input type="text" placeholder="Username">
-                            <input type="email" placeholder="Email">
-                            <input type="password" placeholder="Password">
-                            <button type="submit" class="btn">Register</button>
-                            
-                        </form>
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+			<label for="password">
+				Password:
+			</label>
+			<input type="password"
+				id="password"
+				name="password"
+				placeholder="Enter your Password" required>
 
-    
-    <!---------- footer -------->
-    <div class="footer">
-        <div class="cotainer">
-            <div class="row">
-                <div class="footer-col-1">
-                    <h3>Download our App</h3>
-                    <p>Download App for Andriod and ios mobile devices</p>
-                    <div class="app-logo">
-                        <img src="images/playstore%20blck.jpg">
-                        <img src="images/app%20store%20blck.jpg">
-                    </div>
-                </div>
-                <div class="footer-col-2">
-                    <img src="images/uncleyaks%20blk.jpg">
-                    <p>Her for You</p>
-                </div>
-                <div class="footer-col-3">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li>Coupons</li>
-                        <li>Bolg Post</li>
-                        <li>Return Policy</li>
-                        <li>Join Affiliate</li>
-                    </ul>
-                </div>
-                <div class="footer-col-4">
-                    <h3>Follow Us</h3>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>Twitter</li>
-                        <li>Instagram</li>
-                        <li>Tiktok</li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <p class="Copyright">Copyright 2024 - CST/17/COM/00999 Final Year Project</p>
-        </div>
-    </div>
-<!----------js for toggle menu----------->
-     <script>
-         var MenuItems = document.getElementById("MenuItems");
-         
-         MenuItems.style.maxHeight = "0px";
-         
-         function menutoggle(){
-             if(MenuItems.style.maxHeight == "0px")
-                 {
-                     MenuItems.style.maxHeight = "200px";
-                 }
-             else
-                 {
-                     MenuItems.style.maxHeight = "0px";
-                 }
-         }
-     </script>
+			<div class="wrap">
+                <a href="addtocart.html" class="btn">Submit</a>
+			</div>
+		</form>
+		<p>Not registered? 
+			<a href="register.html"
+			style="text-decoration: none;">
+				Create an account
+			</a>
+		</p>
+	</div>
 
 
-<!----------js for toggle Form----------->
-    <script>
-    
-    var LoginForm = document.getElementById("LoginForm");
-    var RegForm = document.getElementById("RegForm");
-    var Indicator = document.getElementById("Indicator");
-        
-        function register(){
-            
-            RegForm.style.transform = "translateX(0px)";
-            LoginForm.style.transform = "translateX(0px)";
-            Indicator.style.transform = "translateX(100px)";
-        }
-        function login(){
-            
-            RegForm.style.transform = "translateX(300px)";
-            LoginForm.style.transform = "translateX(300px)";
-            Indicator.style.transform = "translateX(0px)";
-        }
-    
-    </script>
-    
-    
-    
-    
-    
-    
-    
-    
 </body>
 </html>
